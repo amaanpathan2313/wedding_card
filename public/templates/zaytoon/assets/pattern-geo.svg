@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+  <!-- Seamless eight-pointed khatim star lattice. Tiles edge to edge. -->
+  <g fill="none" stroke="#123f35" stroke-width="1" stroke-linejoin="round" opacity="0.55">
+    <!-- central eight-point star: a diamond over a square -->
+    <path d="M36 8 64 36 36 64 8 36Z" />
+    <path d="M16 16h40v40H16z" />
+    <!-- arms reaching the tile edges so neighbours join up -->
+    <path d="M36 8V0M64 36h8M36 64v8M8 36H0" />
+    <!-- quarter diamonds at the corners: four tiles make one whole -->
+    <path d="M0 10 10 0M62 0 72 10M72 62 62 72M10 72 0 62" />
+    <circle cx="36" cy="36" r="5" />
+  </g>
+</svg>
