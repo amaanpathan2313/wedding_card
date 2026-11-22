@@ -4,11 +4,58 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="https://saveourdate.in/icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zaid & Sana — Wedding Invitation</title>
+    <title>Neha & Sayed Azhar (Sohail) — Wedding Invitation</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&family=Marcellus&family=Noto+Naskh+Arabic:wght@400;600;700&family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+      /* Suppress Netlify Badge & HUD Drawer */
+      iframe[src*="netlify"],
+      iframe[id*="netlify"],
+      div[id*="netlify"],
+      div[class*="netlify"],
+      [data-netlify-hud],
+      [data-netlify-public-drawer],
+      netlify-drawer,
+      #netlify-hud-widget,
+      .netlify-badge,
+      #netlify-badge {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        position: absolute !important;
+        top: -9999px !important;
+        left: -9999px !important;
+      }
+    </style>
+    <script>
+      (function() {
+        function removeNetlifyBadge() {
+          const selectors = [
+            'iframe[src*="netlify"]',
+            'iframe#netlify-hud-widget',
+            '[data-netlify-hud]',
+            '[data-netlify-public-drawer]',
+            'netlify-drawer',
+            '#netlify-hud-widget',
+            '.netlify-badge',
+            '#netlify-badge'
+          ];
+          selectors.forEach(function(sel) {
+            document.querySelectorAll(sel).forEach(function(el) {
+              el.remove();
+            });
+          });
+        }
+        removeNetlifyBadge();
+        const observer = new MutationObserver(removeNetlifyBadge);
+        observer.observe(document.documentElement, { childList: true, subtree: true });
+      })();
+    </script>
   </head>
   <body class="bg-neutral-50 text-neutral-900 antialiased selection:bg-amber-100 selection:text-amber-900">
     <div id="root"></div>
