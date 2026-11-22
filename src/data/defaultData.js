@@ -1,63 +1,54 @@
-// Authentic data for Zaytoon template matching saveourdate.in/templates/zaytoon/live
+// Wedding invitation data for Neha & Sayed Azhar (Sohail)
 export const zaytoonDemoData = {
   templateKey: "zaytoon",
   slug: "zaytoon",
   couple: {
-    brideName: "Sana",
-    groomName: "Zaid",
-    hashtag: "#ZaidWedsSana",
-    nameOrder: "groom-first"
+    brideName: "Neha",
+    groomName: "Sayed Azhar (Sohail)",
+    hashtag: "#NehaWedsSohail",
+    nameOrder: "bride-first"
   },
-  weddingDateTime: "2027-02-06T16:30:00+05:30",
-  ceremonyStart: "4:30 PM",
-  rsvpDeadline: "20 January 2027",
+  weddingDateTime: "2026-12-26T18:30:00+05:30",
+  ceremonyStart: "6:30 PM",
+  rsvpDeadline: "20 December 2026",
   countdownLabel: "Nikah",
-  heroEyebrow: "Together with our families",
-  heroOccasion: "Nikah & Walima",
+  heroEyebrow: "TOGETHER WITH OUR FAMILIES",
+  heroOccasion: "Nikah",
   venue: {
-    name: "Sultana Gardens & Banquet",
-    address: "22 Nizam Colony, Banjara Hills, Hyderabad, Telangana",
-    city: "Hyderabad",
-    state: "Telangana",
-    mapsUrl: "https://maps.google.com/?q=Sultana+Gardens+Banquet+Hyderabad",
-    note: "Valet parking available at the main gate"
+    name: "Samar Park Building",
+    address: "Behind New City Hospital, At Parpund Village, Palaspa phata, Old Mumbai - Pune Highway, Panvel 410221",
+    city: "Panvel",
+    state: "Maharashtra",
+    mapsUrl: "https://maps.app.goo.gl/GmShD1BB9dXsjBt68",
+    note: "Valet parking available at venue entrance"
   },
   events: [
-    {
-      id: "mangni",
-      name: "Mangni",
-      detail: "Engagement",
-      date: "4 February 2027",
-      time: "6:30 PM",
-      location: "Khan Residence, Hyderabad",
-      mapsUrl: "https://maps.google.com/?q=Khan+Residence+Hyderabad"
-    },
     {
       id: "mehendi",
       name: "Mehendi",
       detail: "Henna Evening",
-      date: "5 February 2027",
+      date: "25 December 2026",
       time: "5:30 PM",
-      location: "Sultana Gardens & Banquet — Lawn",
-      mapsUrl: "https://maps.google.com/?q=Sultana+Gardens+Banquet+Hyderabad"
+      location: "Samar Park Building — Lawn, Panvel",
+      mapsUrl: "https://maps.app.goo.gl/GmShD1BB9dXsjBt68"
     },
     {
       id: "nikah",
       name: "Nikah",
       detail: "The Ceremony",
-      date: "6 February 2027",
-      time: "4:30 PM",
-      location: "Sultana Gardens & Banquet — Main Hall",
-      mapsUrl: "https://maps.google.com/?q=Sultana+Gardens+Banquet+Hyderabad"
+      date: "26 December 2026",
+      time: "6:30 PM",
+      location: "Samar Park Building — Main Hall, Panvel",
+      mapsUrl: "https://maps.app.goo.gl/GmShD1BB9dXsjBt68"
     },
     {
       id: "walima",
       name: "Walima",
       detail: "Reception",
-      date: "6 February 2027",
-      time: "8:30 PM",
-      location: "Sultana Gardens & Banquet — Grand Lawn",
-      mapsUrl: "https://maps.google.com/?q=Sultana+Gardens+Banquet+Hyderabad"
+      date: "27 December 2026",
+      time: "8:00 PM",
+      location: "Samar Park Building — Grand Hall, Panvel",
+      mapsUrl: "https://maps.app.goo.gl/GmShD1BB9dXsjBt68"
     }
   ],
   gallery: [
@@ -67,30 +58,30 @@ export const zaytoonDemoData = {
     },
     {
       url: "https://pub-717179bab2d447a1a4a8b832b13d0e04.r2.dev/template-assets/zaytoon/bg-venue.jpg",
-      caption: "Zaid & Sana · February 6, 2027"
+      caption: "Neha & Sayed Azhar (Sohail) · December 26, 2026"
     },
     {
       url: "https://pub-717179bab2d447a1a4a8b832b13d0e04.r2.dev/template-assets/zaytoon/bg-venue.jpg",
-      caption: "Sultana Gardens & Banquet"
+      caption: "Samar Park Building, Panvel"
     }
   ],
   story: {
     greetingLine1: "Dear",
     greetingLine2: "Family & Friends",
-    message: "By the grace of Allah, we joyfully invite you to be part of our Nikah and Walima celebrations. Your presence, prayers, and blessings would mean the world to us as we begin this new journey together."
+    message: "By the grace of Allah, we joyfully invite you to be part of our Nikah celebrations. Your presence, prayers, and blessings would mean the world to us as we begin this new journey together."
   },
   hosts: {
     groomSide: {
-      relation: "Groom's Family",
-      person: "Zaid Ahmed Qureshi",
-      subtitle: "S/o Mr. Farhan Qureshi & Mrs. Nilofer Qureshi",
-      phone: "+91 98123 45678"
+      relation: "Bride's Father",
+      person: "Firoz Pathan",
+      subtitle: "",
+      phone: "+91 8691978642"
     },
     brideSide: {
-      relation: "Bride's Family",
-      person: "Sana Fatima Ali",
-      subtitle: "D/o Mr. Imtiaz Ali & Mrs. Shabana Ali",
-      phone: "+91 98765 12345"
+      relation: "Family Member",
+      person: "Iqbal Khairat",
+      subtitle: "",
+      phone: "+91 9167496105"
     }
   },
   gifts: [
@@ -107,8 +98,8 @@ export const zaytoonDemoData = {
     message: "Thank you for being a part of our story."
   },
   rsvp: {
-    enabled: true,
-    deadline: "20 January 2027",
+    enabled: false, // In the uploaded design only "VIEW EVENTS" is shown on the hero
+    deadline: "20 December 2026",
     customMessage: "We have saved you a seat — kindly let us know if you can join us.",
     guestOptions: ["1", "2", "3", "4", "5+"],
     fields: {
@@ -136,14 +127,13 @@ export const zaytoonDemoData = {
   music: {
     url: "https://pub-717179bab2d447a1a4a8b832b13d0e04.r2.dev/template-assets/zaytoon/music.mp3"
   },
-  hiddenSections: [],
+  hiddenSections: ["contact"],
   sectionOrder: [
     "scratchReveal",
     "envelop",
     "timeline",
     "countdown",
     "venue",
-    "contact",
     "gifts",
     "hosts",
     "footer"

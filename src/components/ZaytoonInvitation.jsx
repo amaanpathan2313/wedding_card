@@ -605,7 +605,7 @@ export function Hero({
             </a>
           )}
           {showEvents && (
-            <a href="#events" className="btn btn--line hero__btn--magnetic" ref={eventsBtnRef}>
+            <a href="#events" className={`btn ${showRsvp ? "btn--line" : "btn--fill"} hero__btn--magnetic`} ref={eventsBtnRef}>
               View Events
             </a>
           )}
@@ -1852,8 +1852,8 @@ export default function ZaytoonInvitation({ data }) {
           hero={processed.hero}
           audioRef={audioRef}
           onOpen={() => setHasOpened(true)}
-          showRsvp={processed.rsvp.enabled}
-          showEvents={true}
+          showRsvp={processed.rsvp.enabled && !data.hiddenSections?.includes("contact") && !data.hiddenSections?.includes("rsvp")}
+          showEvents={!data.hiddenSections?.includes("timeline")}
         />
 
         {/* QURAN VERSE */}
