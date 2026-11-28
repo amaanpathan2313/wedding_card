@@ -112,3 +112,23 @@
   color: var(--gold);
   font-weight: 600;
 }
+
+/* Dark & High-Contrast Hero Date Line */
+.tmpl-zaytoon .hero__when {
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+  color: #1a1816 !important;
+  font-weight: 700 !important;
+  font-size: clamp(0.82rem, 2vw, 0.94rem) !important;
+  opacity: 1 !important;
+}
+.tmpl-zaytoon .hero__when span {
+  color: #1a1816 !important;
+  font-weight: 700 !important;
+}
+.tmpl-zaytoon .hero__when .hero__dot {
+  background: #1a1816 !important;
+  width: 5px !important;
+  height: 5px !important;
+  opacity: 0.9 !important;
+}
