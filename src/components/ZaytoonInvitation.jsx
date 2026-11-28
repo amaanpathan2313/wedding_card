@@ -1067,6 +1067,7 @@ const TIMELINE_ACCENTS = ["var(--rose)", "var(--sage)", "var(--coral)", "var(--r
 
 export function EventRow({ event, index, total, scrollYProgress, nodeRef, accent }) {
   const IconComponent = EVENT_ICON_COMPONENTS[event.icon] || RingsIcon;
+  const isSingle = total === 1;
   const progressRatio = total > 1 ? index / (total - 1) : 0;
   const litProgress = useTransform(scrollYProgress, [progressRatio - 0.1, progressRatio], [0, 1]);
 
@@ -1077,9 +1078,9 @@ export function EventRow({ event, index, total, scrollYProgress, nodeRef, accent
 
   return (
     <motion.div
-      className={`events__row ${index % 2 === 0 ? "events__row--left" : "events__row--right"}`}
-      initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50, scale: 0.94 }}
-      whileInView={{ opacity: 1, x: 0, scale: 1 }}
+      className={`events__row ${isSingle ? "events__row--single" : index % 2 === 0 ? "events__row--left" : "events__row--right"}`}
+      initial={{ opacity: 0, y: isSingle ? 30 : 0, x: isSingle ? 0 : index % 2 === 0 ? -50 : 50, scale: 0.94 }}
+      whileInView={{ opacity: 1, y: 0, x: 0, scale: 1 }}
       viewport={{ once: true, amount: 0.4 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
@@ -1112,7 +1113,7 @@ export function EventRow({ event, index, total, scrollYProgress, nodeRef, accent
         }}
       >
         <p className="events__when">
-          <span className="events__index">{String(index + 1).padStart(2, "0")}</span>
+          {!isSingle && <span className="events__index">{String(index + 1).padStart(2, "0")}</span>}
           {event.date} · {event.time}
         </p>
         <p className="ar events__arabic">{event.arabic}</p>
@@ -1211,18 +1212,22 @@ export function EventsTimeline({ events, heading }) {
     <section id="events" className="sec sec--alt sec--geo events">
       <div className="wrap">
         <SectionTitle eyebrow={heading.eyebrow} title={heading.title} />
-        <div className="events__list" ref={containerRef}>
-          <div className="events__track" />
-          <motion.div className="events__track-fill" style={{ height: trackFillHeight }} />
-          {svgPathData && (
-            <svg className="events__path-svg" viewBox={`0 0 ${dim.w} ${dim.h}`} aria-hidden="true">
-              <path ref={pathRef} d={svgPathData} className="events__path-bg" />
-              <motion.path d={svgPathData} className="events__path-fill" style={{ pathLength: scrollYProgress }} />
-              <motion.g style={{ x: flameX, y: flameY }}>
-                <circle r="12" className="events__flame-halo" />
-                <circle r="4.5" className="events__flame-core" />
-              </motion.g>
-            </svg>
+        <div className={`events__list ${events.length === 1 ? "events__list--single" : ""}`} ref={containerRef}>
+          {events.length > 1 && (
+            <>
+              <div className="events__track" />
+              <motion.div className="events__track-fill" style={{ height: trackFillHeight }} />
+              {svgPathData && (
+                <svg className="events__path-svg" viewBox={`0 0 ${dim.w} ${dim.h}`} aria-hidden="true">
+                  <path ref={pathRef} d={svgPathData} className="events__path-bg" />
+                  <motion.path d={svgPathData} className="events__path-fill" style={{ pathLength: scrollYProgress }} />
+                  <motion.g style={{ x: flameX, y: flameY }}>
+                    <circle r="12" className="events__flame-halo" />
+                    <circle r="4.5" className="events__flame-core" />
+                  </motion.g>
+                </svg>
+              )}
+            </>
           )}
           {events.map((evt, idx) => (
             <EventRow
@@ -1741,7 +1746,7 @@ export default function ZaytoonInvitation({ data }) {
       },
       eventsHeading: {
         eyebrow: "Celebrating Together",
-        title: "Wedding Events"
+        title: data.events.length === 1 ? "The Nikah Ceremony" : "Wedding Events"
       },
       events: data.events.map(e => {
         const key = (e.name ?? "").trim().toLowerCase().split(/[\s·—-]+/)[0];

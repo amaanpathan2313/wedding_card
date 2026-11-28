@@ -24,30 +24,12 @@ export const zaytoonDemoData = {
   },
   events: [
     {
-      id: "mehendi",
-      name: "Mehendi",
-      detail: "Henna Evening",
-      date: "25 December 2026",
-      time: "5:30 PM",
-      location: "Samar Park Building — Lawn, Panvel",
-      mapsUrl: "https://maps.app.goo.gl/GmShD1BB9dXsjBt68"
-    },
-    {
       id: "nikah",
       name: "Nikah",
       detail: "The Ceremony",
       date: "26 December 2026",
       time: "6:30 PM",
       location: "Samar Park Building — Main Hall, Panvel",
-      mapsUrl: "https://maps.app.goo.gl/GmShD1BB9dXsjBt68"
-    },
-    {
-      id: "walima",
-      name: "Walima",
-      detail: "Reception",
-      date: "27 December 2026",
-      time: "8:00 PM",
-      location: "Samar Park Building — Grand Hall, Panvel",
       mapsUrl: "https://maps.app.goo.gl/GmShD1BB9dXsjBt68"
     }
   ],
