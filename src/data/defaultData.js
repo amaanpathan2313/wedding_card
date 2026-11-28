@@ -6,6 +6,7 @@ export const zaytoonDemoData = {
     brideName: "Neha",
     brideParents: "(D/o. Mr. Firozkhan Khurshid Pathan)",
     groomName: "Sayed Azhar (Sohail)",
+    groomParents: "(S/o. Mr. Sayed Mazher Hussaini, Neral)",
     hashtag: "#NehaWedsSohail",
     nameOrder: "bride-first"
   },

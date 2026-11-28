@@ -1715,7 +1715,7 @@ export default function ZaytoonInvitation({ data }) {
         groomFull: groomName,
         brideFull: brideName,
         brideParents: data.couple?.brideParents ?? "(D/o. Mr. Firozkhan Khurshid Pathan)",
-        groomParents: data.couple?.groomParents ?? "",
+        groomParents: data.couple?.groomParents ?? "(S/o. Mr. Sayed Mazher Hussaini, Neral)",
         nameOrder: order,
         hashtag: data.couple.hashtag ?? `#${groomName}Weds${brideName}`,
         initials: [first?.trim()?.[0]?.toUpperCase() ?? "A", second?.trim()?.[0]?.toUpperCase() ?? "B"]
