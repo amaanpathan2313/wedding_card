@@ -4,6 +4,7 @@ export const zaytoonDemoData = {
   slug: "zaytoon",
   couple: {
     brideName: "Neha",
+    brideParents: "(D/o. Mr. Firozkhan Khurshid Pathan)",
     groomName: "Sayed Azhar (Sohail)",
     hashtag: "#NehaWedsSohail",
     nameOrder: "bride-first"

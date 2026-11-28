@@ -569,14 +569,18 @@ export function Hero({
           {couple.nameOrder === "groom-first" ? (
             <>
               <span data-fit-name>{couple.groom}</span>
+              {couple.groomParents && <span className="hero__parent-info">{couple.groomParents}</span>}
               <span className="script hero__amp">&</span>
               <span data-fit-name>{couple.bride}</span>
+              {couple.brideParents && <span className="hero__parent-info">{couple.brideParents}</span>}
             </>
           ) : (
             <>
               <span data-fit-name>{couple.bride}</span>
+              {couple.brideParents && <span className="hero__parent-info">{couple.brideParents}</span>}
               <span className="script hero__amp">&</span>
               <span data-fit-name>{couple.groom}</span>
+              {couple.groomParents && <span className="hero__parent-info">{couple.groomParents}</span>}
             </>
           )}
         </Fade>
@@ -1710,6 +1714,8 @@ export default function ZaytoonInvitation({ data }) {
         bride: brideName,
         groomFull: groomName,
         brideFull: brideName,
+        brideParents: data.couple?.brideParents ?? "(D/o. Mr. Firozkhan Khurshid Pathan)",
+        groomParents: data.couple?.groomParents ?? "",
         nameOrder: order,
         hashtag: data.couple.hashtag ?? `#${groomName}Weds${brideName}`,
         initials: [first?.trim()?.[0]?.toUpperCase() ?? "A", second?.trim()?.[0]?.toUpperCase() ?? "B"]
