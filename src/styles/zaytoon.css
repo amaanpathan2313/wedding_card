@@ -178,12 +178,12 @@
   flex-shrink: 0;
 }
 
-/* Contact Phone Numbers: Times New Roman in Bold */
+/* Contact Phone Numbers: Stylish Normal Numbers (Cinzel & Marcellus) */
 .tmpl-zaytoon .contact__phone {
-  font-family: "Times New Roman", Times, Georgia, serif !important;
-  font-weight: 700 !important;
-  font-size: clamp(0.96rem, 2.2vw, 1.08rem) !important;
-  letter-spacing: .08em !important;
+  font-family: "Cinzel", "Marcellus", "Cormorant Garamond", serif !important;
+  font-weight: 600 !important;
+  font-size: clamp(0.94rem, 2.2vw, 1.05rem) !important;
+  letter-spacing: .09em !important;
   color: #1a1816 !important;
-  font-variant-numeric: lining-nums proportional-nums !important;
+  font-variant-numeric: lining-nums tabular-nums !important;
 }
