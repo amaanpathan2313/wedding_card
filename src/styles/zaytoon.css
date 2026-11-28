@@ -147,3 +147,33 @@
   text-shadow: none !important;
   display: block !important;
 }
+
+/* Event Card: Bold Date and Eye-Catching Black Location */
+.tmpl-zaytoon .events__when {
+  color: #1a1816 !important;
+  font-weight: 800 !important;
+  font-size: clamp(0.82rem, 2vw, 0.94rem) !important;
+  letter-spacing: .16em !important;
+  text-transform: uppercase !important;
+}
+
+.tmpl-zaytoon .events__place {
+  color: #111111 !important;
+  font-weight: 600 !important;
+  font-size: clamp(0.95rem, 2.3vw, 1.12rem) !important;
+  line-height: 1.6 !important;
+  margin-top: .5rem !important;
+  margin-bottom: .45rem !important;
+  letter-spacing: .01em !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: .4rem !important;
+}
+
+.tmpl-zaytoon .events__pin-icon {
+  width: 18px;
+  height: 18px;
+  color: #111111;
+  flex-shrink: 0;
+}
