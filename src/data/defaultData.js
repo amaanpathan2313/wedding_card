@@ -19,7 +19,7 @@ export const zaytoonDemoData = {
     address: "Behind New City Hospital, At Parpund Village, Palaspa phata, Old Mumbai - Pune Highway, Panvel 410221",
     city: "Panvel",
     state: "Maharashtra",
-    mapsUrl: "https://maps.app.goo.gl/GmShD1BB9dXsjBt68",
+    mapsUrl: "https://maps.app.goo.gl/n3sYZW1SMs72EDMY9",
     note: "Valet parking available at venue entrance"
   },
   events: [
@@ -30,7 +30,7 @@ export const zaytoonDemoData = {
       date: "26 December 2026",
       time: "6:30 PM",
       location: "Samar Park Building — Parpund goan, palaspa phata Panvel",
-      mapsUrl: "https://maps.app.goo.gl/GmShD1BB9dXsjBt68"
+      mapsUrl: "https://maps.app.goo.gl/n3sYZW1SMs72EDMY9"
     }
   ],
   gallery: [
