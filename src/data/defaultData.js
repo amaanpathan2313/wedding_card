@@ -125,7 +125,7 @@ export const zaytoonDemoData = {
     }
   },
   music: {
-    url: "https://pub-717179bab2d447a1a4a8b832b13d0e04.r2.dev/template-assets/zaytoon/music.mp3"
+    url: "/wedding_card_song.mp3"
   },
   hiddenSections: ["contact"],
   sectionOrder: [
