@@ -29,7 +29,7 @@ export const zaytoonDemoData = {
       detail: "The Ceremony",
       date: "26 December 2026",
       time: "6:30 PM",
-      location: "Samar Park Building — Main Hall, Panvel",
+      location: "Samar Park Building — Parpund goan, palaspa phata Panvel",
       mapsUrl: "https://maps.app.goo.gl/GmShD1BB9dXsjBt68"
     }
   ],
