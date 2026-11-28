@@ -1664,6 +1664,9 @@ export function Footer({ couple, data }) {
           <span className="footer__meta-dot" />
           <span>{data.dateLine}</span>
         </Fade>
+        <Fade className="footer__credits" delay={0.36}>
+          <span>Design and Develop by <strong>Amaan Pathan</strong></span>
+        </Fade>
       </div>
     </footer>
   );
